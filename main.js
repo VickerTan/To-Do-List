@@ -8,8 +8,10 @@ window.addEventListener('load', () => {
 
         const task = input.value;
 
-        if (!task) {
+        if (!task || !task.trim().length) {
             alert("Input a task!");
+            input.value = "";
+            input.focus();
             return;
         }
 
